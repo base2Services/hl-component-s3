@@ -61,7 +61,7 @@ def create_bucket(params, event, context):
   bucket_already_exists = True
 
   try:
-    s3 = boto3.client('s3')
+    s3 = boto3.client('s3', region_name=params['Region'])
     response = s3.head_bucket(Bucket=bucket_name)
     print(f"bucket {bucket_name} does already existing so we need don't need to create it")
   except Exception as e:
