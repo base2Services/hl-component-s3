@@ -35,3 +35,5 @@ s3_custom_resources:
       environment:
         ENVIRONMENT_NAME:
           Ref: EnvironmentName
+        AWS_DEFAULT_REGION:
+          Ref: AWS::Region
